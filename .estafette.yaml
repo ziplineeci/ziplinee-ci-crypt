@@ -1,0 +1,40 @@
+builder:
+  track: stable
+
+labels:
+  app-group: estafette-ci
+  type: library
+  team: estafette-team
+  language: golang
+
+version:
+  semver:
+    major: 0
+    minor: 0
+    releaseBranch: main
+
+stages:
+  build:
+    image: golang:1.17-alpine
+    env:
+      CGO_ENABLED: 0
+      GOOS: linux
+    commands:
+    - go test ./...
+
+  tag-revision:
+    image: bitnami/git
+    commands:
+    - git tag v${ESTAFETTE_BUILD_VERSION}
+    - git push origin v${ESTAFETTE_BUILD_VERSION}
+    when: status == 'succeeded' &&
+      branch == 'main'
+
+  slack-notify:
+    image: extensions/slack-build-status:dev
+    workspace: estafette
+    channels:
+    - '#build-status'
+    when:
+      status == 'succeeded' ||
+      status == 'failed'
