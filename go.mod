@@ -1,9 +1,11 @@
-module github.com/estafette/estafette-ci-crypt
+module github.com/ziplineeci/ziplinee-ci-crypt
 
-go 1.17
+go 1.22.2
+
+require github.com/stretchr/testify v1.9.0
 
 require (
-	github.com/davecgh/go-spew v0.0.0-20170829195320-a47672248388 // indirect
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/stretchr/testify v1.1.4
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )

@@ -27,14 +27,11 @@ stages:
     commands:
     - git tag v${ESTAFETTE_BUILD_VERSION}
     - git push origin v${ESTAFETTE_BUILD_VERSION}
-    when: status == 'succeeded' &&
-      branch == 'main'
+    when: status == 'succeeded' && branch == 'main'
 
   slack-notify:
     image: extensions/slack-build-status:dev
     workspace: estafette
     channels:
     - '#build-status'
-    when:
-      status == 'succeeded' ||
-      status == 'failed'
+    when: status == 'succeeded' || status == 'failed'
