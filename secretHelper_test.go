@@ -83,7 +83,7 @@ func TestDecrypt(t *testing.T) {
 
 		secretHelper := NewSecretHelper("SazbwMf3NZxVVbBqQHebPcXCqrVn3DDp", false)
 		originalText := "this is my secret"
-		encryptedTextPlusNonce := "deFTz5Bdjg6SUe29.oPIkXbze5G9PNEWS2-ZnArl8BCqHnx4MdTdxHg37th9u"
+		encryptedTextPlusNonce := "34TwMlihi18JCWHS.bC7KcqyjxJu0bLYnnhLwyXRc1FpBdgWL861orEETEl5d"
 		pipeline := "github.com/ziplineeci/ziplinee-ci-api"
 
 		// act
@@ -96,7 +96,7 @@ func TestDecrypt(t *testing.T) {
 	t.Run("ReturnsDefaultPipelineWhiteListIfStringContainsOneDot", func(t *testing.T) {
 
 		secretHelper := NewSecretHelper("SazbwMf3NZxVVbBqQHebPcXCqrVn3DDp", false)
-		encryptedTextPlusNonce := "deFTz5Bdjg6SUe29.oPIkXbze5G9PNEWS2-ZnArl8BCqHnx4MdTdxHg37th9u"
+		encryptedTextPlusNonce := "34TwMlihi18JCWHS.bC7KcqyjxJu0bLYnnhLwyXRc1FpBdgWL861orEETEl5d"
 		pipeline := "github.com/ziplineeci/ziplinee-ci-api"
 
 		// act
@@ -134,7 +134,7 @@ func TestDecrypt(t *testing.T) {
 
 		secretHelper := NewSecretHelper("SazbwMf3NZxVVbBqQHebPcXCqrVn3DDp", false)
 		originalText := "this is my secret"
-		encryptedTextPlusNonce := "7pB-Znp16my5l-Gz.l--UakUaK5N8KYFt-sVNUaOY5uobSpWabJNVXYDEyDWT.hO6JcRARdtB-PY577NJeUrKMVOx-sjg617wTd8IkAh-PvIm9exuATeDeFiYaEr9eQtfreBQ="
+		encryptedTextPlusNonce := "ggyRBRZW_ofbXRgl.DdPeqg-ulQEKBuiCC_XZVscTrt4yFRxDE_u_mf8OiNtb.HtLDsVqlyEIIEueLB-bHWt1dpHAK7tmKQoHw0cKc5SzZK9Yd1Jh_K5JS0YrmKu91wJpFEDQ="
 		pipeline := "github.com/ziplineeci/ziplinee-ci-api"
 
 		// act
@@ -149,7 +149,7 @@ func TestDecrypt(t *testing.T) {
 
 		secretHelper := NewSecretHelper("SazbwMf3NZxVVbBqQHebPcXCqrVn3DDp", false)
 		originalText := "this is my secret"
-		encryptedTextPlusNonce := "7MZbwVlQJtfLN50U.7dpzK2K9ZYiXw-uy4-VtDQYtUOC8dXGJzvNWBtKNT4SZ._ttuMDe2OMuV1-Sk9fJ-DheE5385dJCn0LQgclmqQWz262VO3kxi"
+		encryptedTextPlusNonce := "I3tNvRAhMJ7LpG0F.PKpXTn1deA7w4BOacMNRKeUJq_F3vbHJ3ZEaeYlaejsY.L6tKVShWJU3y9ByTfNBPJf9crPjfUKrzAyQJt19-9waJ9r00-i7kIg=="
 		pipeline := "github.com/ziplineeci/ziplinee-ci-web"
 
 		// act
@@ -163,7 +163,7 @@ func TestDecrypt(t *testing.T) {
 	t.Run("ReturnsErrorIfPipelineDoesNotMatchPipelineAllowListRegex", func(t *testing.T) {
 
 		secretHelper := NewSecretHelper("SazbwMf3NZxVVbBqQHebPcXCqrVn3DDp", false)
-		encryptedTextPlusNonce := "7pB-Znp16my5l-Gz.l--UakUaK5N8KYFt-sVNUaOY5uobSpWabJNVXYDEyDWT.hO6JcRARdtB-PY577NJeUrKMVOx-sjg617wTd8IkAh-PvIm9exuATeDeFiYaEr9eQtfreBQ="
+		encryptedTextPlusNonce := "ggyRBRZW_ofbXRgl.DdPeqg-ulQEKBuiCC_XZVscTrt4yFRxDE_u_mf8OiNtb.HtLDsVqlyEIIEueLB-bHWt1dpHAK7tmKQoHw0cKc5SzZK9Yd1Jh_K5JS0YrmKu91wJpFEDQ="
 		pipeline := "github.com/ziplineeci/ziplinee-ci-web"
 
 		// act
@@ -179,7 +179,7 @@ func TestDecryptEnvelope(t *testing.T) {
 
 		secretHelper := NewSecretHelper("SazbwMf3NZxVVbBqQHebPcXCqrVn3DDp", false)
 		originalText := "this is my secret"
-		encryptedTextPlusNonce := "ziplinee.secret(deFTz5Bdjg6SUe29.oPIkXbze5G9PNEWS2-ZnArl8BCqHnx4MdTdxHg37th9u)"
+		encryptedTextPlusNonce := "ziplinee.secret(zHt0cZgIPoD3bAAj.3gJmp7tqixtFvIaHgyk-4BCm-gKkvtct0XutytDXY0aR.zQN7vO5h1lhHqImOjzog7AqWiLN1RXnU1EkAATTu-PE8vSIMrfGAznCwj3r0uNhY3MVYX3Y=)"
 		pipeline := "github.com/ziplineeci/ziplinee-ci-api"
 
 		// act
@@ -192,7 +192,7 @@ func TestDecryptEnvelope(t *testing.T) {
 	t.Run("ReturnsErrorIfStringDoesNotContainDot", func(t *testing.T) {
 
 		secretHelper := NewSecretHelper("SazbwMf3NZxVVbBqQHebPcXCqrVn3DDp", false)
-		encryptedTextPlusNonce := "ziplinee.secret(deFTz5Bdjg6SUe29oPIkXbze5G9PNEWS2-ZnArl8BCqHnx4MdTdxHg37th9u)"
+		encryptedTextPlusNonce := "ziplinee.secret(ah12RCso4yoZd32Vlb-wTvz9paM8wQsoV8yd33p_Htq4j0R3tJIWQJ26gI_g)"
 		pipeline := "github.com/ziplineeci/ziplinee-ci-api"
 
 		// act
@@ -255,7 +255,7 @@ func TestReencryptAllEnvelopes(t *testing.T) {
 		base64encodedKey := false
 		secretHelper := NewSecretHelper("SazbwMf3NZxVVbBqQHebPcXCqrVn3DDp", base64encodedKey)
 		// the secret in here is restricted to github.com/ziplineeci/ziplinee-ci-api
-		builderConfigJSON := `{"action":"build","track":"dev","manifest":{"Builder":{"Track":"stable"},"Labels":{"app":"ziplinee-ci-builder","app-group":"ziplinee-ci","language":"golang","team":"ziplinee-team"},"Version":{"SemVer":{"Major":0,"Minor":0,"Patch":"{{auto}}","LabelTemplate":"{{branch}}","ReleaseBranch":"main"},"Custom":null},"GlobalEnvVars":null,"Pipelines":[{"Name":"git-clone","ContainerImage":"extensions/git-clone:stable","Shell":"/bin/sh","WorkingDirectory":"/ziplinee-work","Commands":null, "shallow": false,"When":"status == ''succeeded''","EnvVars":null,"AutoInjected":true,"Retries":0,"CustomProperties":null},{"Name":"build","ContainerImage":"golang:1.11.0-alpine3.8","Shell":"/bin/sh","WorkingDirectory":"/go/src/github.com/ziplineeci/${ZIPLINEE_LABEL_APP}","Commands":["apk --update add git","go test 'go list ./... | grep -v /vendor/'","go build -a -installsuffix cgo -ldflags \"-X main.version=${ZIPLINEE_BUILD_VERSION} -X main.revision=${ZIPLINEE_GIT_REVISION} -X main.branch=${ZIPLINEE_GIT_BRANCH} -X main.buildDate=${ZIPLINEE_BUILD_DATETIME}\" -o ./publish/${ZIPLINEE_LABEL_APP} ."],"When":"status == ''succeeded''","EnvVars":{"CGO_ENABLED":"0","DOCKER_API_VERSION":"1.38","GOOS":"linux"},"AutoInjected":false,"Retries":0,"CustomProperties":null},{"Name":"bake-ziplinee","ContainerImage":"extensions/docker:dev","Shell":"/bin/sh","WorkingDirectory":"/ziplinee-work","Commands":null,"When":"status == ''succeeded''","EnvVars":null,"AutoInjected":false,"Retries":0,"CustomProperties":{"action":"build","copy":["Dockerfile"],"path":"./publish","repositories":["ziplinee"]}}],"Releases":null},"jobName":"build-ziplinee-ziplinee-ci-builder-391855387650326531","ciServer":{"baseUrl":"https://httpstat.us/200","builderEventsUrl":"https://httpstat.us/200","postLogsUrl":"https://httpstat.us/200","apiKey":""},"buildParams":{"buildID":391855387650326531},"git":{"repoSource":"github.com","repoOwner":"ziplineeci","repoName":"ziplinee-ci-builder","repoBranch":"integration-test","repoRevision":"f394515b2a91ea69addf42e4b722442b2905e268"},"buildVersion":{"version":"0.0.0-integration-test","major":0,"minor":0,"patch":"0","autoincrement":0},"credentials":[{"name":"github-api-token","type":"github-api-token","additionalProperties":{"token":"ziplinee.secret(7pB-Znp16my5l-Gz.l--UakUaK5N8KYFt-sVNUaOY5uobSpWabJNVXYDEyDWT.hO6JcRARdtB-PY577NJeUrKMVOx-sjg617wTd8IkAh-PvIm9exuATeDeFiYaEr9eQtfreBQ=)"}}],"trustedImages":[{"path":"extensions/docker","runDocker":true},{"path":"ziplineeci/ziplinee-ci-builder","runPrivileged":true},{"path":"golang","runDocker":true,"allowCommands":true}]}`
+		builderConfigJSON := `{"action":"build","track":"dev","manifest":{"Builder":{"Track":"stable"},"Labels":{"app":"ziplinee-ci-builder","app-group":"ziplinee-ci","language":"golang","team":"ziplinee-team"},"Version":{"SemVer":{"Major":0,"Minor":0,"Patch":"{{auto}}","LabelTemplate":"{{branch}}","ReleaseBranch":"main"},"Custom":null},"GlobalEnvVars":null,"Pipelines":[{"Name":"git-clone","ContainerImage":"extensions/git-clone:stable","Shell":"/bin/sh","WorkingDirectory":"/ziplinee-work","Commands":null, "shallow": false,"When":"status == ''succeeded''","EnvVars":null,"AutoInjected":true,"Retries":0,"CustomProperties":null},{"Name":"build","ContainerImage":"golang:1.11.0-alpine3.8","Shell":"/bin/sh","WorkingDirectory":"/go/src/github.com/ziplineeci/${ZIPLINEE_LABEL_APP}","Commands":["apk --update add git","go test 'go list ./... | grep -v /vendor/'","go build -a -installsuffix cgo -ldflags \"-X main.version=${ZIPLINEE_BUILD_VERSION} -X main.revision=${ZIPLINEE_GIT_REVISION} -X main.branch=${ZIPLINEE_GIT_BRANCH} -X main.buildDate=${ZIPLINEE_BUILD_DATETIME}\" -o ./publish/${ZIPLINEE_LABEL_APP} ."],"When":"status == ''succeeded''","EnvVars":{"CGO_ENABLED":"0","DOCKER_API_VERSION":"1.38","GOOS":"linux"},"AutoInjected":false,"Retries":0,"CustomProperties":null},{"Name":"bake-ziplinee","ContainerImage":"extensions/docker:dev","Shell":"/bin/sh","WorkingDirectory":"/ziplinee-work","Commands":null,"When":"status == ''succeeded''","EnvVars":null,"AutoInjected":false,"Retries":0,"CustomProperties":{"action":"build","copy":["Dockerfile"],"path":"./publish","repositories":["ziplinee"]}}],"Releases":null},"jobName":"build-ziplinee-ziplinee-ci-builder-391855387650326531","ciServer":{"baseUrl":"https://httpstat.us/200","builderEventsUrl":"https://httpstat.us/200","postLogsUrl":"https://httpstat.us/200","apiKey":""},"buildParams":{"buildID":391855387650326531},"git":{"repoSource":"github.com","repoOwner":"ziplineeci","repoName":"ziplinee-ci-builder","repoBranch":"integration-test","repoRevision":"f394515b2a91ea69addf42e4b722442b2905e268"},"buildVersion":{"version":"0.0.0-integration-test","major":0,"minor":0,"patch":"0","autoincrement":0},"credentials":[{"name":"github-api-token","type":"github-api-token","additionalProperties":{"token":"ziplinee.secret(DQyT78E7UTipKhYb.zItT__sV5ckZaZ5GnGAlHAQC3662JQ88A-R9bmH0ymni.34pO5K4euIobfZFPkHM7EB7mUU2-fCc_ug1GWYqBTwOpLtOfmsjpNWU7hc-qbFuIly32I-Q=)"}}],"trustedImages":[{"path":"extensions/docker","runDocker":true},{"path":"ziplineeci/ziplinee-ci-builder","runPrivileged":true},{"path":"golang","runDocker":true,"allowCommands":true}]}`
 		pipeline := "github.com/ziplineeci/ziplinee-ci-web"
 
 		// act
@@ -278,7 +278,7 @@ func TestReencryptAllEnvelopes(t *testing.T) {
 
 		base64encodedKey := true
 		secretHelper := NewSecretHelper("U2F6YndNZjNOWnhWVmJCcVFIZWJQY1hDcXJWbjNERHA=", base64encodedKey)
-		builderConfigJSON := `{"action":"build","track":"dev","manifest":{"Builder":{"Track":"stable"},"Labels":{"app":"ziplinee-ci-builder","app-group":"ziplinee-ci","language":"golang","team":"ziplinee-team"},"Version":{"SemVer":{"Major":0,"Minor":0,"Patch":"{{auto}}","LabelTemplate":"{{branch}}","ReleaseBranch":"main"},"Custom":null},"GlobalEnvVars":null,"Pipelines":[{"Name":"git-clone","ContainerImage":"extensions/git-clone:stable","Shell":"/bin/sh","WorkingDirectory":"/ziplinee-work","Commands":null, "shallow": false,"When":"status == ''succeeded''","EnvVars":null,"AutoInjected":true,"Retries":0,"CustomProperties":null},{"Name":"build","ContainerImage":"golang:1.11.0-alpine3.8","Shell":"/bin/sh","WorkingDirectory":"/go/src/github.com/ziplineeci/${ZIPLINEE_LABEL_APP}","Commands":["apk --update add git","go test 'go list ./... | grep -v /vendor/'","go build -a -installsuffix cgo -ldflags \"-X main.version=${ZIPLINEE_BUILD_VERSION} -X main.revision=${ZIPLINEE_GIT_REVISION} -X main.branch=${ZIPLINEE_GIT_BRANCH} -X main.buildDate=${ZIPLINEE_BUILD_DATETIME}\" -o ./publish/${ZIPLINEE_LABEL_APP} ."],"When":"status == ''succeeded''","EnvVars":{"CGO_ENABLED":"0","DOCKER_API_VERSION":"1.38","GOOS":"linux"},"AutoInjected":false,"Retries":0,"CustomProperties":null},{"Name":"bake-ziplinee","ContainerImage":"extensions/docker:dev","Shell":"/bin/sh","WorkingDirectory":"/ziplinee-work","Commands":null,"When":"status == ''succeeded''","EnvVars":null,"AutoInjected":false,"Retries":0,"CustomProperties":{"action":"build","copy":["Dockerfile"],"path":"./publish","repositories":["ziplinee"]}}],"Releases":null},"jobName":"build-ziplinee-ziplinee-ci-builder-391855387650326531","ciServer":{"baseUrl":"https://httpstat.us/200","builderEventsUrl":"https://httpstat.us/200","postLogsUrl":"https://httpstat.us/200","apiKey":""},"buildParams":{"buildID":391855387650326531},"git":{"repoSource":"github.com","repoOwner":"ziplineeci","repoName":"ziplinee-ci-builder","repoBranch":"integration-test","repoRevision":"f394515b2a91ea69addf42e4b722442b2905e268"},"buildVersion":{"version":"0.0.0-integration-test","major":0,"minor":0,"patch":"0","autoincrement":0},"credentials":[{"name":"github-api-token","type":"github-api-token","additionalProperties":{"token":"ziplinee.secret(deFTz5Bdjg6SUe29.oPIkXbze5G9PNEWS2-ZnArl8BCqHnx4MdTdxHg37th9u)"}}],"trustedImages":[{"path":"extensions/docker","runDocker":true},{"path":"ziplineeci/ziplinee-ci-builder","runPrivileged":true},{"path":"golang","runDocker":true,"allowCommands":true}]}`
+		builderConfigJSON := `{"action":"build","track":"dev","manifest":{"Builder":{"Track":"stable"},"Labels":{"app":"ziplinee-ci-builder","app-group":"ziplinee-ci","language":"golang","team":"ziplinee-team"},"Version":{"SemVer":{"Major":0,"Minor":0,"Patch":"{{auto}}","LabelTemplate":"{{branch}}","ReleaseBranch":"main"},"Custom":null},"GlobalEnvVars":null,"Pipelines":[{"Name":"git-clone","ContainerImage":"extensions/git-clone:stable","Shell":"/bin/sh","WorkingDirectory":"/ziplinee-work","Commands":null, "shallow": false,"When":"status == ''succeeded''","EnvVars":null,"AutoInjected":true,"Retries":0,"CustomProperties":null},{"Name":"build","ContainerImage":"golang:1.11.0-alpine3.8","Shell":"/bin/sh","WorkingDirectory":"/go/src/github.com/ziplineeci/${ZIPLINEE_LABEL_APP}","Commands":["apk --update add git","go test 'go list ./... | grep -v /vendor/'","go build -a -installsuffix cgo -ldflags \"-X main.version=${ZIPLINEE_BUILD_VERSION} -X main.revision=${ZIPLINEE_GIT_REVISION} -X main.branch=${ZIPLINEE_GIT_BRANCH} -X main.buildDate=${ZIPLINEE_BUILD_DATETIME}\" -o ./publish/${ZIPLINEE_LABEL_APP} ."],"When":"status == ''succeeded''","EnvVars":{"CGO_ENABLED":"0","DOCKER_API_VERSION":"1.38","GOOS":"linux"},"AutoInjected":false,"Retries":0,"CustomProperties":null},{"Name":"bake-ziplinee","ContainerImage":"extensions/docker:dev","Shell":"/bin/sh","WorkingDirectory":"/ziplinee-work","Commands":null,"When":"status == ''succeeded''","EnvVars":null,"AutoInjected":false,"Retries":0,"CustomProperties":{"action":"build","copy":["Dockerfile"],"path":"./publish","repositories":["ziplinee"]}}],"Releases":null},"jobName":"build-ziplinee-ziplinee-ci-builder-391855387650326531","ciServer":{"baseUrl":"https://httpstat.us/200","builderEventsUrl":"https://httpstat.us/200","postLogsUrl":"https://httpstat.us/200","apiKey":""},"buildParams":{"buildID":391855387650326531},"git":{"repoSource":"github.com","repoOwner":"ziplineeci","repoName":"ziplinee-ci-builder","repoBranch":"integration-test","repoRevision":"f394515b2a91ea69addf42e4b722442b2905e268"},"buildVersion":{"version":"0.0.0-integration-test","major":0,"minor":0,"patch":"0","autoincrement":0},"credentials":[{"name":"github-api-token","type":"github-api-token","additionalProperties":{"token":"ziplinee.secret(MpHxojAPal_XIF_K.R4_LANCK38oT_KC90NyNOEwQUDitqR9Dznf1GGmLnO4P)"}}],"trustedImages":[{"path":"extensions/docker","runDocker":true},{"path":"ziplineeci/ziplinee-ci-builder","runPrivileged":true},{"path":"golang","runDocker":true,"allowCommands":true}]}`
 		pipeline := "github.com/ziplineeci/ziplinee-ci-api"
 
 		// act
@@ -293,7 +293,7 @@ func TestReencryptAllEnvelopes(t *testing.T) {
 
 		base64encodedKey := false
 		secretHelper := NewSecretHelper("SazbwMf3NZxVVbBqQHebPcXCqrVn3DDp", base64encodedKey)
-		builderConfigJSON := `{"action":"build","track":"dev","manifest":{"Builder":{"Track":"stable"},"Labels":{"app":"ziplinee-ci-builder","app-group":"ziplinee-ci","language":"golang","team":"ziplinee-team"},"Version":{"SemVer":{"Major":0,"Minor":0,"Patch":"{{auto}}","LabelTemplate":"{{branch}}","ReleaseBranch":"main"},"Custom":null},"GlobalEnvVars":null,"Pipelines":[{"Name":"git-clone","ContainerImage":"extensions/git-clone:stable","Shell":"/bin/sh","WorkingDirectory":"/ziplinee-work","Commands":null, "shallow": false,"When":"status == ''succeeded''","EnvVars":null,"AutoInjected":true,"Retries":0,"CustomProperties":null},{"Name":"build","ContainerImage":"golang:1.11.0-alpine3.8","Shell":"/bin/sh","WorkingDirectory":"/go/src/github.com/ziplineeci/${ZIPLINEE_LABEL_APP}","Commands":["apk --update add git","go test 'go list ./... | grep -v /vendor/'","go build -a -installsuffix cgo -ldflags \"-X main.version=${ZIPLINEE_BUILD_VERSION} -X main.revision=${ZIPLINEE_GIT_REVISION} -X main.branch=${ZIPLINEE_GIT_BRANCH} -X main.buildDate=${ZIPLINEE_BUILD_DATETIME}\" -o ./publish/${ZIPLINEE_LABEL_APP} ."],"When":"status == ''succeeded''","EnvVars":{"CGO_ENABLED":"0","DOCKER_API_VERSION":"1.38","GOOS":"linux"},"AutoInjected":false,"Retries":0,"CustomProperties":null},{"Name":"bake-ziplinee","ContainerImage":"extensions/docker:dev","Shell":"/bin/sh","WorkingDirectory":"/ziplinee-work","Commands":null,"When":"status == ''succeeded''","EnvVars":null,"AutoInjected":false,"Retries":0,"CustomProperties":{"action":"build","copy":["Dockerfile"],"path":"./publish","repositories":["ziplinee"]}}],"Releases":null},"jobName":"build-ziplinee-ziplinee-ci-builder-391855387650326531","ciServer":{"baseUrl":"https://httpstat.us/200","builderEventsUrl":"https://httpstat.us/200","postLogsUrl":"https://httpstat.us/200","apiKey":""},"buildParams":{"buildID":391855387650326531},"git":{"repoSource":"github.com","repoOwner":"ziplineeci","repoName":"ziplinee-ci-builder","repoBranch":"integration-test","repoRevision":"f394515b2a91ea69addf42e4b722442b2905e268"},"buildVersion":{"version":"0.0.0-integration-test","major":0,"minor":0,"patch":"0","autoincrement":0},"credentials":[{"name":"github-api-token","type":"github-api-token","additionalProperties":{"token":"ziplinee.secret(deFTz5Bdjg6SUe29.oPIkXbze5G9PNEWS2-ZnArl8BCqHnx4MdTdxHg37th9u)"}}],"trustedImages":[{"path":"extensions/docker","runDocker":true},{"path":"ziplineeci/ziplinee-ci-builder","runPrivileged":true},{"path":"golang","runDocker":true,"allowCommands":true}]}`
+		builderConfigJSON := `{"action":"build","track":"dev","manifest":{"Builder":{"Track":"stable"},"Labels":{"app":"ziplinee-ci-builder","app-group":"ziplinee-ci","language":"golang","team":"ziplinee-team"},"Version":{"SemVer":{"Major":0,"Minor":0,"Patch":"{{auto}}","LabelTemplate":"{{branch}}","ReleaseBranch":"main"},"Custom":null},"GlobalEnvVars":null,"Pipelines":[{"Name":"git-clone","ContainerImage":"extensions/git-clone:stable","Shell":"/bin/sh","WorkingDirectory":"/ziplinee-work","Commands":null, "shallow": false,"When":"status == ''succeeded''","EnvVars":null,"AutoInjected":true,"Retries":0,"CustomProperties":null},{"Name":"build","ContainerImage":"golang:1.11.0-alpine3.8","Shell":"/bin/sh","WorkingDirectory":"/go/src/github.com/ziplineeci/${ZIPLINEE_LABEL_APP}","Commands":["apk --update add git","go test 'go list ./... | grep -v /vendor/'","go build -a -installsuffix cgo -ldflags \"-X main.version=${ZIPLINEE_BUILD_VERSION} -X main.revision=${ZIPLINEE_GIT_REVISION} -X main.branch=${ZIPLINEE_GIT_BRANCH} -X main.buildDate=${ZIPLINEE_BUILD_DATETIME}\" -o ./publish/${ZIPLINEE_LABEL_APP} ."],"When":"status == ''succeeded''","EnvVars":{"CGO_ENABLED":"0","DOCKER_API_VERSION":"1.38","GOOS":"linux"},"AutoInjected":false,"Retries":0,"CustomProperties":null},{"Name":"bake-ziplinee","ContainerImage":"extensions/docker:dev","Shell":"/bin/sh","WorkingDirectory":"/ziplinee-work","Commands":null,"When":"status == ''succeeded''","EnvVars":null,"AutoInjected":false,"Retries":0,"CustomProperties":{"action":"build","copy":["Dockerfile"],"path":"./publish","repositories":["ziplinee"]}}],"Releases":null},"jobName":"build-ziplinee-ziplinee-ci-builder-391855387650326531","ciServer":{"baseUrl":"https://httpstat.us/200","builderEventsUrl":"https://httpstat.us/200","postLogsUrl":"https://httpstat.us/200","apiKey":""},"buildParams":{"buildID":391855387650326531},"git":{"repoSource":"github.com","repoOwner":"ziplineeci","repoName":"ziplinee-ci-builder","repoBranch":"integration-test","repoRevision":"f394515b2a91ea69addf42e4b722442b2905e268"},"buildVersion":{"version":"0.0.0-integration-test","major":0,"minor":0,"patch":"0","autoincrement":0},"credentials":[{"name":"github-api-token","type":"github-api-token","additionalProperties":{"token":"ziplinee.secret(MpHxojAPal_XIF_K.R4_LANCK38oT_KC90NyNOEwQUDitqR9Dznf1GGmLnO4P)"}}],"trustedImages":[{"path":"extensions/docker","runDocker":true},{"path":"ziplineeci/ziplinee-ci-builder","runPrivileged":true},{"path":"golang","runDocker":true,"allowCommands":true}]}`
 		expectedValue := `{"action":"build","track":"dev","manifest":{"Builder":{"Track":"stable"},"Labels":{"app":"ziplinee-ci-builder","app-group":"ziplinee-ci","language":"golang","team":"ziplinee-team"},"Version":{"SemVer":{"Major":0,"Minor":0,"Patch":"{{auto}}","LabelTemplate":"{{branch}}","ReleaseBranch":"main"},"Custom":null},"GlobalEnvVars":null,"Pipelines":[{"Name":"git-clone","ContainerImage":"extensions/git-clone:stable","Shell":"/bin/sh","WorkingDirectory":"/ziplinee-work","Commands":null, "shallow": false,"When":"status == ''succeeded''","EnvVars":null,"AutoInjected":true,"Retries":0,"CustomProperties":null},{"Name":"build","ContainerImage":"golang:1.11.0-alpine3.8","Shell":"/bin/sh","WorkingDirectory":"/go/src/github.com/ziplineeci/${ZIPLINEE_LABEL_APP}","Commands":["apk --update add git","go test 'go list ./... | grep -v /vendor/'","go build -a -installsuffix cgo -ldflags \"-X main.version=${ZIPLINEE_BUILD_VERSION} -X main.revision=${ZIPLINEE_GIT_REVISION} -X main.branch=${ZIPLINEE_GIT_BRANCH} -X main.buildDate=${ZIPLINEE_BUILD_DATETIME}\" -o ./publish/${ZIPLINEE_LABEL_APP} ."],"When":"status == ''succeeded''","EnvVars":{"CGO_ENABLED":"0","DOCKER_API_VERSION":"1.38","GOOS":"linux"},"AutoInjected":false,"Retries":0,"CustomProperties":null},{"Name":"bake-ziplinee","ContainerImage":"extensions/docker:dev","Shell":"/bin/sh","WorkingDirectory":"/ziplinee-work","Commands":null,"When":"status == ''succeeded''","EnvVars":null,"AutoInjected":false,"Retries":0,"CustomProperties":{"action":"build","copy":["Dockerfile"],"path":"./publish","repositories":["ziplinee"]}}],"Releases":null},"jobName":"build-ziplinee-ziplinee-ci-builder-391855387650326531","ciServer":{"baseUrl":"https://httpstat.us/200","builderEventsUrl":"https://httpstat.us/200","postLogsUrl":"https://httpstat.us/200","apiKey":""},"buildParams":{"buildID":391855387650326531},"git":{"repoSource":"github.com","repoOwner":"ziplineeci","repoName":"ziplinee-ci-builder","repoBranch":"integration-test","repoRevision":"f394515b2a91ea69addf42e4b722442b2905e268"},"buildVersion":{"version":"0.0.0-integration-test","major":0,"minor":0,"patch":"0","autoincrement":0},"credentials":[{"name":"github-api-token","type":"github-api-token","additionalProperties":{"token":"this is my secret"}}],"trustedImages":[{"path":"extensions/docker","runDocker":true},{"path":"ziplineeci/ziplinee-ci-builder","runPrivileged":true},{"path":"golang","runDocker":true,"allowCommands":true}]}`
 		pipeline := "github.com/ziplineeci/ziplinee-ci-api"
 
@@ -311,7 +311,7 @@ func TestReencryptAllEnvelopes(t *testing.T) {
 
 		base64encodedKey := true
 		secretHelper := NewSecretHelper("U2F6YndNZjNOWnhWVmJCcVFIZWJQY1hDcXJWbjNERHA=", base64encodedKey)
-		builderConfigJSON := `{"action":"build","track":"dev","manifest":{"Builder":{"Track":"stable"},"Labels":{"app":"ziplinee-ci-builder","app-group":"ziplinee-ci","language":"golang","team":"ziplinee-team"},"Version":{"SemVer":{"Major":0,"Minor":0,"Patch":"{{auto}}","LabelTemplate":"{{branch}}","ReleaseBranch":"main"},"Custom":null},"GlobalEnvVars":null,"Pipelines":[{"Name":"git-clone","ContainerImage":"extensions/git-clone:stable","Shell":"/bin/sh","WorkingDirectory":"/ziplinee-work","Commands":null, "shallow": false,"When":"status == ''succeeded''","EnvVars":null,"AutoInjected":true,"Retries":0,"CustomProperties":null},{"Name":"build","ContainerImage":"golang:1.11.0-alpine3.8","Shell":"/bin/sh","WorkingDirectory":"/go/src/github.com/ziplineeci/${ZIPLINEE_LABEL_APP}","Commands":["apk --update add git","go test 'go list ./... | grep -v /vendor/'","go build -a -installsuffix cgo -ldflags \"-X main.version=${ZIPLINEE_BUILD_VERSION} -X main.revision=${ZIPLINEE_GIT_REVISION} -X main.branch=${ZIPLINEE_GIT_BRANCH} -X main.buildDate=${ZIPLINEE_BUILD_DATETIME}\" -o ./publish/${ZIPLINEE_LABEL_APP} ."],"When":"status == ''succeeded''","EnvVars":{"CGO_ENABLED":"0","DOCKER_API_VERSION":"1.38","GOOS":"linux"},"AutoInjected":false,"Retries":0,"CustomProperties":null},{"Name":"bake-ziplinee","ContainerImage":"extensions/docker:dev","Shell":"/bin/sh","WorkingDirectory":"/ziplinee-work","Commands":null,"When":"status == ''succeeded''","EnvVars":null,"AutoInjected":false,"Retries":0,"CustomProperties":{"action":"build","copy":["Dockerfile"],"path":"./publish","repositories":["ziplinee"]}}],"Releases":null},"jobName":"build-ziplinee-ziplinee-ci-builder-391855387650326531","ciServer":{"baseUrl":"https://httpstat.us/200","builderEventsUrl":"https://httpstat.us/200","postLogsUrl":"https://httpstat.us/200","apiKey":""},"buildParams":{"buildID":391855387650326531},"git":{"repoSource":"github.com","repoOwner":"ziplineeci","repoName":"ziplinee-ci-builder","repoBranch":"integration-test","repoRevision":"f394515b2a91ea69addf42e4b722442b2905e268"},"buildVersion":{"version":"0.0.0-integration-test","major":0,"minor":0,"patch":"0","autoincrement":0},"credentials":[{"name":"github-api-token","type":"github-api-token","additionalProperties":{"token":"ziplinee.secret(deFTz5Bdjg6SUe29.oPIkXbze5G9PNEWS2-ZnArl8BCqHnx4MdTdxHg37th9u)"}}],"trustedImages":[{"path":"extensions/docker","runDocker":true},{"path":"ziplineeci/ziplinee-ci-builder","runPrivileged":true},{"path":"golang","runDocker":true,"allowCommands":true}]}`
+		builderConfigJSON := `{"action":"build","track":"dev","manifest":{"Builder":{"Track":"stable"},"Labels":{"app":"ziplinee-ci-builder","app-group":"ziplinee-ci","language":"golang","team":"ziplinee-team"},"Version":{"SemVer":{"Major":0,"Minor":0,"Patch":"{{auto}}","LabelTemplate":"{{branch}}","ReleaseBranch":"main"},"Custom":null},"GlobalEnvVars":null,"Pipelines":[{"Name":"git-clone","ContainerImage":"extensions/git-clone:stable","Shell":"/bin/sh","WorkingDirectory":"/ziplinee-work","Commands":null, "shallow": false,"When":"status == ''succeeded''","EnvVars":null,"AutoInjected":true,"Retries":0,"CustomProperties":null},{"Name":"build","ContainerImage":"golang:1.11.0-alpine3.8","Shell":"/bin/sh","WorkingDirectory":"/go/src/github.com/ziplineeci/${ZIPLINEE_LABEL_APP}","Commands":["apk --update add git","go test 'go list ./... | grep -v /vendor/'","go build -a -installsuffix cgo -ldflags \"-X main.version=${ZIPLINEE_BUILD_VERSION} -X main.revision=${ZIPLINEE_GIT_REVISION} -X main.branch=${ZIPLINEE_GIT_BRANCH} -X main.buildDate=${ZIPLINEE_BUILD_DATETIME}\" -o ./publish/${ZIPLINEE_LABEL_APP} ."],"When":"status == ''succeeded''","EnvVars":{"CGO_ENABLED":"0","DOCKER_API_VERSION":"1.38","GOOS":"linux"},"AutoInjected":false,"Retries":0,"CustomProperties":null},{"Name":"bake-ziplinee","ContainerImage":"extensions/docker:dev","Shell":"/bin/sh","WorkingDirectory":"/ziplinee-work","Commands":null,"When":"status == ''succeeded''","EnvVars":null,"AutoInjected":false,"Retries":0,"CustomProperties":{"action":"build","copy":["Dockerfile"],"path":"./publish","repositories":["ziplinee"]}}],"Releases":null},"jobName":"build-ziplinee-ziplinee-ci-builder-391855387650326531","ciServer":{"baseUrl":"https://httpstat.us/200","builderEventsUrl":"https://httpstat.us/200","postLogsUrl":"https://httpstat.us/200","apiKey":""},"buildParams":{"buildID":391855387650326531},"git":{"repoSource":"github.com","repoOwner":"ziplineeci","repoName":"ziplinee-ci-builder","repoBranch":"integration-test","repoRevision":"f394515b2a91ea69addf42e4b722442b2905e268"},"buildVersion":{"version":"0.0.0-integration-test","major":0,"minor":0,"patch":"0","autoincrement":0},"credentials":[{"name":"github-api-token","type":"github-api-token","additionalProperties":{"token":"ziplinee.secret(MpHxojAPal_XIF_K.R4_LANCK38oT_KC90NyNOEwQUDitqR9Dznf1GGmLnO4P)"}}],"trustedImages":[{"path":"extensions/docker","runDocker":true},{"path":"ziplineeci/ziplinee-ci-builder","runPrivileged":true},{"path":"golang","runDocker":true,"allowCommands":true}]}`
 		expectedValue := `{"action":"build","track":"dev","manifest":{"Builder":{"Track":"stable"},"Labels":{"app":"ziplinee-ci-builder","app-group":"ziplinee-ci","language":"golang","team":"ziplinee-team"},"Version":{"SemVer":{"Major":0,"Minor":0,"Patch":"{{auto}}","LabelTemplate":"{{branch}}","ReleaseBranch":"main"},"Custom":null},"GlobalEnvVars":null,"Pipelines":[{"Name":"git-clone","ContainerImage":"extensions/git-clone:stable","Shell":"/bin/sh","WorkingDirectory":"/ziplinee-work","Commands":null, "shallow": false,"When":"status == ''succeeded''","EnvVars":null,"AutoInjected":true,"Retries":0,"CustomProperties":null},{"Name":"build","ContainerImage":"golang:1.11.0-alpine3.8","Shell":"/bin/sh","WorkingDirectory":"/go/src/github.com/ziplineeci/${ZIPLINEE_LABEL_APP}","Commands":["apk --update add git","go test 'go list ./... | grep -v /vendor/'","go build -a -installsuffix cgo -ldflags \"-X main.version=${ZIPLINEE_BUILD_VERSION} -X main.revision=${ZIPLINEE_GIT_REVISION} -X main.branch=${ZIPLINEE_GIT_BRANCH} -X main.buildDate=${ZIPLINEE_BUILD_DATETIME}\" -o ./publish/${ZIPLINEE_LABEL_APP} ."],"When":"status == ''succeeded''","EnvVars":{"CGO_ENABLED":"0","DOCKER_API_VERSION":"1.38","GOOS":"linux"},"AutoInjected":false,"Retries":0,"CustomProperties":null},{"Name":"bake-ziplinee","ContainerImage":"extensions/docker:dev","Shell":"/bin/sh","WorkingDirectory":"/ziplinee-work","Commands":null,"When":"status == ''succeeded''","EnvVars":null,"AutoInjected":false,"Retries":0,"CustomProperties":{"action":"build","copy":["Dockerfile"],"path":"./publish","repositories":["ziplinee"]}}],"Releases":null},"jobName":"build-ziplinee-ziplinee-ci-builder-391855387650326531","ciServer":{"baseUrl":"https://httpstat.us/200","builderEventsUrl":"https://httpstat.us/200","postLogsUrl":"https://httpstat.us/200","apiKey":""},"buildParams":{"buildID":391855387650326531},"git":{"repoSource":"github.com","repoOwner":"ziplineeci","repoName":"ziplinee-ci-builder","repoBranch":"integration-test","repoRevision":"f394515b2a91ea69addf42e4b722442b2905e268"},"buildVersion":{"version":"0.0.0-integration-test","major":0,"minor":0,"patch":"0","autoincrement":0},"credentials":[{"name":"github-api-token","type":"github-api-token","additionalProperties":{"token":"this is my secret"}}],"trustedImages":[{"path":"extensions/docker","runDocker":true},{"path":"ziplineeci/ziplinee-ci-builder","runPrivileged":true},{"path":"golang","runDocker":true,"allowCommands":true}]}`
 		pipeline := "github.com/ziplineeci/ziplinee-ci-api"
 
@@ -333,9 +333,9 @@ func TestGetAllSecretEnvelopes(t *testing.T) {
 		secretHelper := NewSecretHelper("SazbwMf3NZxVVbBqQHebPcXCqrVn3DDp", false)
 
 		input := `
-		ziplinee.secret(deFTz5Bdjg6SUe29.oPIkXbze5G9PNEWS2-ZnArl8BCqHnx4MdTdxHg37th9u)
+		ziplinee.secret(MpHxojAPal_XIF_K.R4_LANCK38oT_KC90NyNOEwQUDitqR9Dznf1GGmLnO4P)
 
-		ziplinee.secret(7pB-Znp16my5l-Gz.l--UakUaK5N8KYFt-sVNUaOY5uobSpWabJNVXYDEyDWT.hO6JcRARdtB-PY577NJeUrKMVOx-sjg617wTd8IkAh-PvIm9exuATeDeFiYaEr9eQtfreBQ=)
+		ziplinee.secret(n-WqaQnVu5zN8FZI.sYmyQx414B0xOYHqnTKNtaCQ7B4sIj91Q8pjYtpe83fV.ooivWEs-vV4zLY7jkSGTubrIQThCXbd-eVpZM6Bm4xUraOJsDf3pPulX1wSjVFf2OH7G-do=)
 		`
 
 		// act
@@ -345,8 +345,8 @@ func TestGetAllSecretEnvelopes(t *testing.T) {
 		if !assert.Equal(t, 2, len(envelopes)) {
 			return
 		}
-		assert.Equal(t, "ziplinee.secret(deFTz5Bdjg6SUe29.oPIkXbze5G9PNEWS2-ZnArl8BCqHnx4MdTdxHg37th9u)", envelopes[0])
-		assert.Equal(t, "ziplinee.secret(7pB-Znp16my5l-Gz.l--UakUaK5N8KYFt-sVNUaOY5uobSpWabJNVXYDEyDWT.hO6JcRARdtB-PY577NJeUrKMVOx-sjg617wTd8IkAh-PvIm9exuATeDeFiYaEr9eQtfreBQ=)", envelopes[1])
+		assert.Equal(t, "ziplinee.secret(MpHxojAPal_XIF_K.R4_LANCK38oT_KC90NyNOEwQUDitqR9Dznf1GGmLnO4P)", envelopes[0])
+		assert.Equal(t, "ziplinee.secret(n-WqaQnVu5zN8FZI.sYmyQx414B0xOYHqnTKNtaCQ7B4sIj91Q8pjYtpe83fV.ooivWEs-vV4zLY7jkSGTubrIQThCXbd-eVpZM6Bm4xUraOJsDf3pPulX1wSjVFf2OH7G-do=)", envelopes[1])
 	})
 }
 
@@ -357,9 +357,9 @@ func TestGetAllSecrets(t *testing.T) {
 		secretHelper := NewSecretHelper("SazbwMf3NZxVVbBqQHebPcXCqrVn3DDp", false)
 
 		input := `
-		ziplinee.secret(deFTz5Bdjg6SUe29.oPIkXbze5G9PNEWS2-ZnArl8BCqHnx4MdTdxHg37th9u)
+		ziplinee.secret(MpHxojAPal_XIF_K.R4_LANCK38oT_KC90NyNOEwQUDitqR9Dznf1GGmLnO4P)
 
-		ziplinee.secret(7pB-Znp16my5l-Gz.l--UakUaK5N8KYFt-sVNUaOY5uobSpWabJNVXYDEyDWT.hO6JcRARdtB-PY577NJeUrKMVOx-sjg617wTd8IkAh-PvIm9exuATeDeFiYaEr9eQtfreBQ=)
+		ziplinee.secret(n-WqaQnVu5zN8FZI.sYmyQx414B0xOYHqnTKNtaCQ7B4sIj91Q8pjYtpe83fV.ooivWEs-vV4zLY7jkSGTubrIQThCXbd-eVpZM6Bm4xUraOJsDf3pPulX1wSjVFf2OH7G-do=)
 		`
 
 		// act
@@ -369,8 +369,8 @@ func TestGetAllSecrets(t *testing.T) {
 		if !assert.Equal(t, 2, len(secrets)) {
 			return
 		}
-		assert.Equal(t, "deFTz5Bdjg6SUe29.oPIkXbze5G9PNEWS2-ZnArl8BCqHnx4MdTdxHg37th9u", secrets[0])
-		assert.Equal(t, "7pB-Znp16my5l-Gz.l--UakUaK5N8KYFt-sVNUaOY5uobSpWabJNVXYDEyDWT.hO6JcRARdtB-PY577NJeUrKMVOx-sjg617wTd8IkAh-PvIm9exuATeDeFiYaEr9eQtfreBQ=", secrets[1])
+		assert.Equal(t, "MpHxojAPal_XIF_K.R4_LANCK38oT_KC90NyNOEwQUDitqR9Dznf1GGmLnO4P", secrets[0])
+		assert.Equal(t, "n-WqaQnVu5zN8FZI.sYmyQx414B0xOYHqnTKNtaCQ7B4sIj91Q8pjYtpe83fV.ooivWEs-vV4zLY7jkSGTubrIQThCXbd-eVpZM6Bm4xUraOJsDf3pPulX1wSjVFf2OH7G-do=", secrets[1])
 	})
 }
 
@@ -381,10 +381,11 @@ func TestGetAllSecretValues(t *testing.T) {
 		secretHelper := NewSecretHelper("SazbwMf3NZxVVbBqQHebPcXCqrVn3DDp", false)
 
 		input := `
-		ziplinee.secret(deFTz5Bdjg6SUe29.oPIkXbze5G9PNEWS2-ZnArl8BCqHnx4MdTdxHg37th9u)
+		ziplinee.secret(MpHxojAPal_XIF_K.R4_LANCK38oT_KC90NyNOEwQUDitqR9Dznf1GGmLnO4P)
 
-		ziplinee.secret(7pB-Znp16my5l-Gz.l--UakUaK5N8KYFt-sVNUaOY5uobSpWabJNVXYDEyDWT.hO6JcRARdtB-PY577NJeUrKMVOx-sjg617wTd8IkAh-PvIm9exuATeDeFiYaEr9eQtfreBQ=)
+		ziplinee.secret(n-WqaQnVu5zN8FZI.sYmyQx414B0xOYHqnTKNtaCQ7B4sIj91Q8pjYtpe83fV.ooivWEs-vV4zLY7jkSGTubrIQThCXbd-eVpZM6Bm4xUraOJsDf3pPulX1wSjVFf2OH7G-do=)
 		`
+
 		pipeline := "github.com/ziplineeci/ziplinee-ci-api"
 
 		// act
@@ -403,10 +404,11 @@ func TestGetAllSecretValues(t *testing.T) {
 		secretHelper := NewSecretHelper("SazbwMf3NZxVVbBqQHebPcXCqrVn3DDp", false)
 
 		input := `
-		ziplinee.secret(deFTz5Bdjg6SUe29.oPIkXbze5G9PNEWS2-ZnArl8BCqHnx4MdTdxHg37th9u)
+		ziplinee.secret(MpHxojAPal_XIF_K.R4_LANCK38oT_KC90NyNOEwQUDitqR9Dznf1GGmLnO4P)
 
-		ziplinee.secret(7pB-Znp16my5l-Gz.l--UakUaK5N8KYFt-sVNUaOY5uobSpWabJNVXYDEyDWT.hO6JcRARdtB-PY577NJeUrKMVOx-sjg617wTd8IkAh-PvIm9exuATeDeFiYaEr9eQtfreBQ=)
+		ziplinee.secret(n-WqaQnVu5zN8FZI.sYmyQx414B0xOYHqnTKNtaCQ7B4sIj91Q8pjYtpe83fV.ooivWEs-vV4zLY7jkSGTubrIQThCXbd-eVpZM6Bm4xUraOJsDf3pPulX1wSjVFf2OH7G-do=)
 		`
+
 		pipeline := "github.com/ziplineeci/ziplinee-ci-web"
 
 		// act
@@ -423,10 +425,11 @@ func TestGetInvalidRestrictedSecrets(t *testing.T) {
 		secretHelper := NewSecretHelper("SazbwMf3NZxVVbBqQHebPcXCqrVn3DDp", false)
 
 		input := `
-		ziplinee.secret(deFTz5Bdjg6SUe29.oPIkXbze5G9PNEWS2-ZnArl8BCqHnx4MdTdxHg37th9u)
+		ziplinee.secret(MpHxojAPal_XIF_K.R4_LANCK38oT_KC90NyNOEwQUDitqR9Dznf1GGmLnO4P)
 
-		ziplinee.secret(7pB-Znp16my5l-Gz.l--UakUaK5N8KYFt-sVNUaOY5uobSpWabJNVXYDEyDWT.hO6JcRARdtB-PY577NJeUrKMVOx-sjg617wTd8IkAh-PvIm9exuATeDeFiYaEr9eQtfreBQ=)
+		ziplinee.secret(n-WqaQnVu5zN8FZI.sYmyQx414B0xOYHqnTKNtaCQ7B4sIj91Q8pjYtpe83fV.ooivWEs-vV4zLY7jkSGTubrIQThCXbd-eVpZM6Bm4xUraOJsDf3pPulX1wSjVFf2OH7G-do=)
 		`
+
 		pipeline := "github.com/ziplineeci/ziplinee-ci-api"
 
 		// act
@@ -441,10 +444,11 @@ func TestGetInvalidRestrictedSecrets(t *testing.T) {
 		secretHelper := NewSecretHelper("SazbwMf3NZxVVbBqQHebPcXCqrVn3DDp", false)
 
 		input := `
-		ziplinee.secret(deFTz5Bdjg6SUe29.oPIkXbze5G9PNEWS2-ZnArl8BCqHnx4MdTdxHg37th9u)
+		ziplinee.secret(MpHxojAPal_XIF_K.R4_LANCK38oT_KC90NyNOEwQUDitqR9Dznf1GGmLnO4P)
 
-		ziplinee.secret(7pB-Znp16my5l-Gz.l--UakUaK5N8KYFt-sVNUaOY5uobSpWabJNVXYDEyDWT.hO6JcRARdtB-PY577NJeUrKMVOx-sjg617wTd8IkAh-PvIm9exuATeDeFiYaEr9eQtfreBQ=)
+		ziplinee.secret(n-WqaQnVu5zN8FZI.sYmyQx414B0xOYHqnTKNtaCQ7B4sIj91Q8pjYtpe83fV.ooivWEs-vV4zLY7jkSGTubrIQThCXbd-eVpZM6Bm4xUraOJsDf3pPulX1wSjVFf2OH7G-do=)
 		`
+
 		pipeline := "github.com/ziplineeci/ziplinee-ci-web"
 
 		// act
@@ -453,6 +457,6 @@ func TestGetInvalidRestrictedSecrets(t *testing.T) {
 		assert.NotNil(t, err)
 		assert.True(t, errors.Is(err, ErrRestrictedSecret))
 		assert.Equal(t, 1, len(invalidSecrets))
-		assert.Equal(t, "ziplinee.secret(7pB-Znp16my5l-Gz.l--UakUaK5N8KYFt-sVNUaOY5uobSpWabJNVXYDEyDWT.hO6JcRARdtB-PY577NJeUrKMVOx-sjg617wTd8IkAh-PvIm9exuATeDeFiYaEr9eQtfreBQ=)", invalidSecrets[0])
+		assert.Equal(t, "ziplinee.secret(n-WqaQnVu5zN8FZI.sYmyQx414B0xOYHqnTKNtaCQ7B4sIj91Q8pjYtpe83fV.ooivWEs-vV4zLY7jkSGTubrIQThCXbd-eVpZM6Bm4xUraOJsDf3pPulX1wSjVFf2OH7G-do=)", invalidSecrets[0])
 	})
 }
