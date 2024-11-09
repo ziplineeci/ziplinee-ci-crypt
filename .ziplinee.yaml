@@ -2,9 +2,9 @@ builder:
   track: stable
 
 labels:
-  app-group: estafette-ci
+  app-group: ziplinee-ci
   type: library
-  team: estafette-team
+  team: ziplinee-team
   language: golang
 
 version:
@@ -25,13 +25,13 @@ stages:
   tag-revision:
     image: bitnami/git
     commands:
-    - git tag v${ESTAFETTE_BUILD_VERSION}
-    - git push origin v${ESTAFETTE_BUILD_VERSION}
+    - git tag v${ZIPLINEE_BUILD_VERSION}
+    - git push origin v${ZIPLINEE_BUILD_VERSION}
     when: status == 'succeeded' && branch == 'main'
 
   slack-notify:
     image: extensions/slack-build-status:dev
-    workspace: estafette
+    workspace: ziplinee
     channels:
     - '#build-status'
     when: status == 'succeeded' || status == 'failed'

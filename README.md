@@ -2,7 +2,7 @@
 
 The `ziplinee-ci-crypt` library is part of the Ziplinee CI system documented at https://ziplinee.io.
 
-Please file any issues related to Ziplinee CI at https://github.com/ZiplineeCI/ziplinee-ci-central/issues
+Please file any issues related to Ziplinee CI at https://github.com/ziplineeci/ziplinee-ci-central/issues
 
 ## Ziplinee-ci-crypt
 
@@ -13,7 +13,7 @@ This library provides encrypt / decrypt functionality for Ziplinee CI secrets; i
 To start development run
 
 ```bash
-git clone git@github.com:ZiplineeCI/ziplinee-ci-crypt.git
+git clone git@github.com:ziplineeci/ziplinee-ci-crypt.git
 cd ziplinee-ci-crypt
 ```
 

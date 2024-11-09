@@ -20,8 +20,8 @@ var (
 // DefaultPipelineAllowList is the regular expression that allows any pipeline to decrypt a secret
 const DefaultPipelineAllowList = ".*"
 
-// SecretEnvelopeRegex is the regular expression to match an estafette secret envelope
-const SecretEnvelopeRegex = `estafette\.secret\(([a-zA-Z0-9.=_-]+)\)`
+// SecretEnvelopeRegex is the regular expression to match an ziplinee secret envelope
+const SecretEnvelopeRegex = `ziplinee\.secret\(([a-zA-Z0-9.=_-]+)\)`
 
 // SecretHelper is the interface for encrypting and decrypting secrets
 type SecretHelper interface {
@@ -196,7 +196,7 @@ func (sh *secretHelperImpl) encryptEnvelopeWithKey(unencryptedText, pipelineAllo
 	if err != nil {
 		return
 	}
-	encryptedTextInEnvelope = fmt.Sprintf("estafette.secret(%v)", encryptedText)
+	encryptedTextInEnvelope = fmt.Sprintf("ziplinee.secret(%v)", encryptedText)
 
 	return
 }
