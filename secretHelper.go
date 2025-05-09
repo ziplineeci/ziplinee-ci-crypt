@@ -14,7 +14,7 @@ import (
 
 var (
 	// ErrRestrictedSecret is thrown if a restricted secret for another pipeline is encountered
-	ErrRestrictedSecret = errors.New("This secret is restricted to another pipeline")
+	ErrRestrictedSecret = errors.New("this secret is restricted to another pipeline")
 )
 
 // DefaultPipelineAllowList is the regular expression that allows any pipeline to decrypt a secret
@@ -36,6 +36,7 @@ type SecretHelper interface {
 	GetAllSecrets(input string) (secrets []string, err error)
 	GetAllSecretValues(input, pipeline string) (values []string, err error)
 	GetInvalidRestrictedSecrets(input, pipeline string) (invalidSecrets []string, err error)
+	IsEncryptedEnvelope(s string) bool
 }
 
 type secretHelperImpl struct {
@@ -63,6 +64,14 @@ func (sh *secretHelperImpl) getKey(key string, base64encodedKey bool) (keyBytes 
 	}
 
 	return keyBytes, nil
+}
+
+func (sh *secretHelperImpl) IsEncryptedEnvelope(s string) bool {
+	r, err := regexp.Compile(fmt.Sprintf("^%v$", SecretEnvelopeRegex))
+	if err != nil {
+		return false
+	}
+	return r.MatchString(s)
 }
 
 func (sh *secretHelperImpl) Encrypt(unencryptedText, pipelineAllowList string) (encryptedTextPlusNonce string, err error) {
